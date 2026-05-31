@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+h1 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    gap: 40px;
+}
+
+.score {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px 30px;
+    border-radius: 10px;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.score .label {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.score-value {
+    color: #ffff00;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+}
+
+.game-info {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+    font-size: 0.95em;
+}
+
+#gameCanvas {
+    background: #000;
+    border: 3px solid white;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    cursor: none;
+}
+
+.game-footer {
+    margin-top: 20px;
+}
+
+#resetBtn {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+}
+
+#resetBtn:hover {
+    background: linear-gradient(45deg, #ff5252, #dd4d42);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+}
+
+#resetBtn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    #gameCanvas {
+        width: 100%;
+        height: auto;
+    }
+
+    .scoreboard {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
